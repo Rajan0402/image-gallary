@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { mock } from "node:test";
+import Image from "next/image";
 
 const mockUrls=[
   // "https://utfs.io/f/1b28723c-f1cf-4586-8822-d0846f705caf-z9awnr.jpg",
@@ -22,7 +21,7 @@ export default function HomePage() {
       <div className="flex flex-wrap gap-4">
         {mockImages.map((image) => (
           <div className="max-w-96">
-            <img src={image.url} />
+            <Image src={image.url} alt="test"/>
           </div>
         ))}
       </div>
