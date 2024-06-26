@@ -1,7 +1,6 @@
 import { db } from "@/server/db";
 import { images } from "@/server/db/schema";
 import { auth } from "@clerk/nextjs/server";
-import { url } from "inspector";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
  
