@@ -1,11 +1,14 @@
 // import { div } from './modal';
 
-import React from "react";
+import FullPullImgView from "@/components/full-page-img";
 
-export default function ImgModal({
+export default function ImgPage({
   params: { id: photoId },
 }: {
   params: { id: string };
 }) {
-  return <div>{photoId}</div>;
+  const idAsNumber = Number(photoId)
+  if(isNaN(idAsNumber)) throw new Error("Invalid image id")
+
+  return <div><FullPullImgView id={idAsNumber} /></div>;
 }
