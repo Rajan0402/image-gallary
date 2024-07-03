@@ -1,6 +1,6 @@
 // import { div } from './modal';
 
-import FullPullImgView from "@/components/full-page-img";
+import FullPullImgView from "@/app/common/full-page-img";
 
 export default function ImgPage({
   params: { id: photoId },
