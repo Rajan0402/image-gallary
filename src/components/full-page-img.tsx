@@ -4,7 +4,7 @@ import { getImages } from "@/server/queries";
 import { clerkClient } from "@clerk/nextjs/server";
 
 export default async function FullPullImgView(props:{id: number}) {
-  const image = await getImages(props.id)
+  const image: any = await getImages(props.id)
 
   const uploaderInfo = await clerkClient.users.getUser(image.userId)
   return (
