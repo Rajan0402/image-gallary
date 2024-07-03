@@ -38,22 +38,32 @@ function UploadSVG() {
   )
 }
 
+// function makeSpinnerToast() {
+//   return toast(<div className=" text-white text-lg items-center">Upload complete</div>,{
+//     duration: 3000,
+//   })
+// }
+
+// window.makeToast = makeSpinnerToast
+
+function LoadingSpinnerSVG() {
+  return (<svg width="24" height="24" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white"><g className="spinner_V8m1"><circle cx="12" cy="12" r="9.5" fill="none" strokeWidth={3}></circle></g></svg>)
+}
+
 export function SimpleUploadButton() {
     const router = useRouter()
 
     const {inputProps} = useUploadThingInputProps("imageUploader", {
       onUploadBegin() {
-        toast("Uploading...",{
+      toast(<div className="flex gap-2 text-white text-lg                                 items-center"><LoadingSpinnerSVG/>Uploading...</div>,{
           duration: 1000000,
           id: "upload-begin",
-          closeButton: true
         })
       },
       onClientUploadComplete(res) {
         toast.dismiss("upload-begin")
-        toast("Upload complete",{
+        toast(<div className=" text-white text-lg items-center">Upload complete</div>,{
           duration: 3000,
-          closeButton: true
         })
         router.refresh()
       }
