@@ -34,8 +34,7 @@ export async function FullPageImgView(props: { photoId: string }) {
               "use server";
 
               await deleteImage(idAsNumber);
-            }}
-          >
+            }}>
             <Button type="submit" variant="destructive">
               Delete
             </Button>
