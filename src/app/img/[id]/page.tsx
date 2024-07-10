@@ -1,5 +1,3 @@
-// import { div } from './modal';
-
 import {FullPageImgView} from "@/common/full-page-img";
 
 export default function ImgPage({

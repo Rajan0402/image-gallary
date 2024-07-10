@@ -7,5 +7,8 @@ export default function ImgModal({
   params: { id: string };
 }) {
 
-  return <Modal><FullPageImgView photoId={photoId} /></Modal>;
+  return (
+  <Modal>
+    <FullPageImgView photoId={photoId} />
+  </Modal>);
 }
